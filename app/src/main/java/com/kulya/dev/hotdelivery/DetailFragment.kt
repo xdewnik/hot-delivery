@@ -55,7 +55,7 @@ class DetailFragment: AppCompatDialogFragment() {
 
     private infix fun setUpRecyclerView(goodList:MutableList<Good>){
         detailFragmentAdapter = DetailFragmentAdapter(goodList)
-        with(order_recycler){
+        with(detail_recycler){
             layoutManager = LinearLayoutManager(context!!, LinearLayoutManager.VERTICAL, false)
             adapter = detailFragmentAdapter
             scheduleLayoutAnimation()
