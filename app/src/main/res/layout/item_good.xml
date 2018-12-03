@@ -1,9 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        xmlns:android="http://schemas.android.com/apk/res/android"
+android:layout_marginBottom="@dimen/activity_horizontal_margin"
+>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:orientation="vertical" android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:padding="@dimen/activity_horizontal_margin"
+                android:padding="@dimen/activity_horizontal_margin"
     >
+
+
 
     <ImageView
         android:id="@+id/good_image"
@@ -39,5 +47,5 @@
         android:textSize="20sp"
         android:layout_centerVertical="true"
         />
-
 </RelativeLayout>
+</android.support.v7.widget.CardView>

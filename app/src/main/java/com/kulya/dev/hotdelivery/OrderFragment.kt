@@ -8,9 +8,12 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import com.kulya.dev.hotdelivery.adapter.OrderFragmentAdapter
+import com.kulya.dev.hotdelivery.data.Client
+import com.kulya.dev.hotdelivery.data.Good
 import com.kulya.dev.hotdelivery.data.Order
 import com.kulya.dev.hotdelivery.ex.hide
 import com.kulya.dev.hotdelivery.ex.show
+import kotlinx.android.synthetic.main.app_bar_main.*
 import kotlinx.android.synthetic.main.fragment_order.*
 
 class OrderFragment: Fragment(), OrderFragmentAdapter.OrderClickListener {
@@ -27,11 +30,22 @@ class OrderFragment: Fragment(), OrderFragmentAdapter.OrderClickListener {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        //nado nash list proinitialize
+        activity?.actionBar?.title = "Orders"
+        val igor = Client("Igor","Dobr 14124 321", "+380677577827")
+        orderList = mutableListOf(
+            Order(mutableListOf(Good("https://images.pizza33.ua/products_for_catalog/F87hxnCbFeBIeznrX4rJZtvODfoMLMuD.jpg","Bavarskaya","100 grn","1")
+                ), "1541241", igor,"100 grn"
+            ),   Order(mutableListOf(Good("https://images.pizza33.ua/products_for_catalog/F87hxnCbFeBIeznrX4rJZtvODfoMLMuD.jpg","Bavarskaya","100 grn","1")
+            ), "1541241", igor,"100 grn"
+            ),  Order(mutableListOf(Good("https://images.pizza33.ua/products_for_catalog/F87hxnCbFeBIeznrX4rJZtvODfoMLMuD.jpg","Bavarskaya","100 grn","1")
+            ), "1541241", igor,"100 grn"
+            )
+        )
+
         if (orderList != null) {
             order_recycler.show()
             order_empty.hide()
-            //tyt ebashim updateAdapter() i vse rabotaet
+            updateAdapter(orderList!!)
         }else{
             order_recycler.hide()
             order_empty.show()

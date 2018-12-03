@@ -14,6 +14,6 @@ class DetailFragmentAdapter constructor(
         good_name.text = item.name
         good_price.text = item.price
         good_quantity.text = item.quantity
-        Glide.with(itemView.context).load(item.image).into(good_image)
+        Glide.with(context).load("https://images.pizza33.ua/products_for_catalog/F87hxnCbFeBIeznrX4rJZtvODfoMLMuD.jpg").into(good_image)
     }
 }

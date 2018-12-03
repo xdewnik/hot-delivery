@@ -5,6 +5,7 @@ import android.os.PersistableBundle
 import android.support.v4.app.DialogFragment
 import android.support.v7.app.AppCompatActivity
 import com.kulya.dev.hotdelivery.data.Order
+import kotlinx.android.synthetic.main.app_bar_main.*
 
 class MainActivity : AppCompatActivity(){
 
@@ -12,6 +13,7 @@ class MainActivity : AppCompatActivity(){
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
+        setSupportActionBar(toolbar)
         if (savedInstanceState == null) {
             openFragment()
         }
