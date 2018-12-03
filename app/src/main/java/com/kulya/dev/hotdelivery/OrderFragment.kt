@@ -13,7 +13,7 @@ import com.kulya.dev.hotdelivery.ex.hide
 import com.kulya.dev.hotdelivery.ex.show
 import kotlinx.android.synthetic.main.fragment_order.*
 
-class OrderFragment: AppCompatDialogFragment(), OrderFragmentAdapter.OrderClickListener {
+class OrderFragment: Fragment(), OrderFragmentAdapter.OrderClickListener {
 
 
     private var orderList: MutableList<Order>? = null
