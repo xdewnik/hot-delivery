@@ -69,6 +69,8 @@ class MapsActivity : AppCompatActivity() , PermissionsListener, OnMapReadyCallba
 //        enableLocationComponent()
         originLocation = getLastKnownLocation()
         originCoord = LatLng(originLocation!!.latitude, originLocation!!.longitude)
+
+
         mapboxMap!!.addMarker(MarkerOptions().setPosition(LatLng(originLocation!!.latitude, originLocation!!.longitude)))
         val position = CameraPosition.Builder()
             .target(LatLng(originLocation!!.latitude, originLocation!!.longitude)) // Sets the new camera position
@@ -89,6 +91,7 @@ class MapsActivity : AppCompatActivity() , PermissionsListener, OnMapReadyCallba
         destinationCoord = point
         destinationMarker = mapboxMap!!.addMarker(
             MarkerOptions()
+                .title("Order #1541241").snippet("Dobr 14124 321")
                 .position(destinationCoord)
         )
 
