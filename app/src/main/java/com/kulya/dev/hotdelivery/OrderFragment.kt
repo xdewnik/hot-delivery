@@ -1,5 +1,6 @@
 package com.kulya.dev.hotdelivery
 
+import android.content.Intent
 import android.os.Bundle
 import android.support.v4.app.Fragment
 import android.support.v7.app.AppCompatDialogFragment
@@ -30,6 +31,9 @@ class OrderFragment: Fragment(), OrderFragmentAdapter.OrderClickListener {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
+
+        order_accept.setOnClickListener { openMap() }
+
         activity?.actionBar?.title = "Orders"
         val igor = Client("Igor","Dobr 14124 321", "+380677577827")
         orderList = mutableListOf(
@@ -50,6 +54,10 @@ class OrderFragment: Fragment(), OrderFragmentAdapter.OrderClickListener {
             order_recycler.hide()
             order_empty.show()
         }
+    }
+
+    private fun openMap(){
+        startActivity(Intent(context, MapsActivity::class.java))
     }
 
 

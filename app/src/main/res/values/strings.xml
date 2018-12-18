@@ -12,4 +12,8 @@
     <string name="permission_rationale">"Contacts permissions are needed for providing email
         completions."
     </string>
+<string name="access_token" translatable="false">pk.eyJ1IjoiYWVuZ3Vzc29uZyIsImEiOiJjanBoOHpnY3Uwcmx2M3dwZjZ0N2c1czY1In0.uCcRZGAb8JuoLQqylVQ8rg</string>
+
+    <string name="user_location_permission_explanation">This app needs location permissions in order to show its functionality.</string>
+<string name="user_location_permission_not_granted">You didn\'t grant location permissions.</string>
 </resources>
